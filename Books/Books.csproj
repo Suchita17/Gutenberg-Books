@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="FileExport\**" />
+    <EmbeddedResource Remove="FileExport\**" />
+    <None Remove="FileExport\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Books.BusinessLayer\Books.BusinessLayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
